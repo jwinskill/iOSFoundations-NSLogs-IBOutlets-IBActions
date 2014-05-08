@@ -26,4 +26,51 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonPressed:(id)sender
+{
+    UIButton *thisButton = sender;
+    
+    NSLog(@"%@ has been pressed", thisButton.titleLabel.text);
+}
+
+- (IBAction)onlySwitch:(id)sender
+{
+    UISwitch *thisSwitch = sender;
+    
+    if (thisSwitch.on) {
+        NSLog (@"The switch is on");
+    }
+    
+}
+
+- (IBAction)onlySlider:(id)sender
+{
+    UISlider *thisSlider = sender;
+    
+    if (thisSlider.value > 0.5) {
+        NSLog(@"The Slider is currently at %f", thisSlider.value);
+    }
+}
+- (IBAction)turnBlue:(id)sender {
+    
+    UIColor *blueColor = [UIColor blueColor];
+    
+    self.view.backgroundColor = blueColor;
+}
+
+- (IBAction)turnOrange:(id)sender
+{
+    
+    UIColor *orangeColor = [UIColor orangeColor];
+    
+    self.view.backgroundColor = orangeColor;
+}
+
+- (IBAction)turnRed:(id)sender
+{
+    UIColor *redColor = [UIColor redColor];
+    
+    self.view.backgroundColor = redColor;
+}
+
 @end
